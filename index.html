@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <STYle>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .logo1 {
+            height: 50px;
+
+        }
+
+        .logo1:hover {
+            border: 1px solid rgb(244, 234, 234);
+            scale: 1.1;
+        }
+
+        .adresslogo {
+            height: 50px;
+            margin-left: 2px;
+        }
+
+        .adresslogo:hover {
+            border: 1px solid rgb(244, 234, 234);
+
+        }
+
+        .container-fluid {
+            background-color: rgb(22, 26, 31);
+            z-index: 2000;
+            margin-top: 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            left: 0;
+            right: 0;
+
+        }
+
+        .nav-item {
+            background-color: rgb(203, 202, 202);
+            border-radius: 5px;
+
+        }
+
+        .order strong {
+            font-weight: bold;
+        }
+
+
+        .dropdown button {
+            border: none;
+            background: transparent;
+            font-size: 12px;
+        }
+
+
+        .dropdown:hover {
+            border: 1px solid white;
+            padding: 3px;
+        }
+
+
+        .signin,
+        .order,
+        .cart {
+            cursor: pointer;
+            font-size: 12px;
+
+        }
+
+        .cart {
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+
+        .signin,
+        .order {
+            font-size: 14px;
+        }
+
+
+
+        .signin:hover,
+        .order:hover,
+        .cart:hover {
+            border: 1px solid white;
+            padding: 3px;
+        }
+
+        .signin {
+            color: white;
+            font-size: 12px;
+        }
+
+
+        .signin-btn {
+            display: inline-block;
+            margin-top: 5px;
+            padding: 5px 10px;
+            background-color: orange;
+            color: black;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+
+        .signin-btn:hover {
+            background-color: rgb(73, 81, 89);
+            text-decoration: underline;
+        }
+
+
+        .second-navbar {
+            background-color: #232f3e;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding-top: 35px;
+
+            gap: 15px;
+            font-size: 14px;
+        }
+
+
+        .menu-item {
+            cursor: pointer;
+            padding: 5px;
+        }
+
+
+        .menu-item:hover {
+            border: 1px solid rgb(255, 251, 251);
+        }
+
+
+        .all {
+            font-weight: bold;
+        }
+
+        .second-navbar {
+            overflow-x: auto;
+
+        }
+
+        .paypng:hover {
+            border: 1px solid white;
+        }
+
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+            background-color: #e3e6e6;
+        }
+
+
+        .card-box {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .card-box h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .card-grid img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+        }
+
+        .card-grid p {
+            font-size: 12px;
+        }
+
+        .seemore {
+            font-size: 12px;
+            text-decoration: none;
+
+        }
+
+        .footer {
+            background-color: #232f3e;
+            color: white;
+            padding: 40px;
+            margin-top: -10px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .footer-section {
+            width: 200px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 10px;
+        }
+
+        .footer-section p {
+            font-size: 14px;
+            margin: 5px 0;
+            cursor: pointer;
+        }
+
+        .footer-section p:hover {
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 0px;
+            border-top: 1px solid gray;
+            padding-top: 10px;
+            font-size: 14px;
+        }
+
+        .back-to-top {
+            display: block;
+            padding: 10px;
+            text-align: center;
+            background-color: #2f4053;
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        .back-to-top:hover {
+            background-color: #495d76;
+        }
+        .logo2{
+            height: 40px;
+            width: 90px;
+           margin-left: 550px;
+        }
+
+        
+    </STYle>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- /////navbar -->
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class=" navbar-brand" href="#"> <a href="trial.html"><img src="logoamazon.png" alt=""
+                        class="logo1"></a><img src="amazon adress.png" class="adresslogo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <ul class="navbar-nav mx-auto align-items-center">
+
+
+
+                <li class="nav-item ms-3">
+                    <form class="d-flex search-wrapper mx-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        ALL
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">All Categories</a></li>
+                        <li><a class="dropdown-item" href="#">M Alexa Skills</a></li>
+                        <li><a class="dropdown-item" href="#">Amazon Devices</a></li>
+                        <li><a class="dropdown-item" href="#">Amazon Fashion</a></li>
+                        <li><a class="dropdown-item" href="#">Beauty</a></li>
+                        <li><a class="dropdown-item" href="#">Car & Motorbike</a></li>
+                        <li><a class="dropdown-item" href="#">Clothing & Accessories</a></li>
+                        <li><a class="dropdown-item" href="#">Collectibles</a></li>
+                        <li><a class="dropdown-item" href="#">Deals</a></li>
+                        <li><a class="dropdown-item" href="#">Electronics</a></li>
+                        <li><a class="dropdown-item" href="#">Furniture</a></li>
+                        <li><a class="dropdown-item" href="#">Garden & Outdoors</a></li>
+
+                    </ul>
+                </li>
+
+
+                <input class="form-control" type="search" placeholder="Search Amazon.in">
+                <button class="btn btn-warning" type="submit">Search</button>
+                </form>
+
+                </li>
+
+
+            </ul>
+
+            </form>
+            <div class="d-flex align-items-center text-white gap-3">
+
+                <div class="dropdown ms-3">
+                    <button class="btn text-white dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        EN 🌐
+                    </button>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">English (EN)</a></li>
+                        <li><a class="dropdown-item" href="#">हिंदी (HI)</a></li>
+                        <li><a class="dropdown-item" href="#">தமிழ் (TA)</a></li>
+                        <li><a class="dropdown-item" href="#">తెలుగు (TE)</a></li>
+                    </ul>
+                </div>
+                <div class="signin">
+
+                    <span>Hello, sign in</span><br>
+
+                    <a href="signin.html" class="signin-btn">
+                        Sign In
+                    </a>
+
+                </div>
+                <div class="order">
+                    Returns <br>
+                    <strong>& Orders</strong>
+                </div>
+                <div class="cart">
+
+                    <span>Cart</span><br>
+
+                    <a href="cart.html" class="cart-btn">
+                        🛒 Cart
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="second-navbar">
+        <div class="d-flex align-items-center text-white gap-3">
+
+            <div class="menu-item all">
+                <button class="btn text-white dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                    ☰ All
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Best sellers</a></li>
+                    <li><a class="dropdown-item" href="#">New releases</a></li>
+                    <li><a class="dropdown-item" href="#">Fire TV</a></li>
+                    <li><a class="dropdown-item" href="#">Mobiles,Computers</a></li>
+                </ul>
+            </div>
+
+            <div class="menu-item">Fresh</div>
+            <div class="menu-item">MX Player</div>
+            <div class="menu-item">Sell</div>
+            <div class="menu-item">Bestsellers</div>
+            <div class="menu-item">Mobiles</div>
+            <div class="menu-item">Customer Service</div>
+            <div class="menu-item">Today's Deals</div>
+            <div class="menu-item">New Releases</div>
+            <div class="menu-item">Prime</div>
+            <div class="menu-item">Fashion</div>
+            <div class="menu-item">Electronics</div>
+        </div>
+        <img src="pay.png" class="paypng" alt="">
+    </div>
+
+
+    <!-- ///crausel -->
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="slide 1.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="slide 2.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="slide 3.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="slide 4.png" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <!-- ////cards-->
+
+
+
+    <div class="cards-container">
+
+        <!-- CARD 1 -->
+        <div class="card-box">
+            <h3>Appliances for your home</h3>
+
+            <div class="card-grid">
+                <div>
+                    <img src="ac.png">
+                    <p>Air conditioners</p>
+                </div>
+
+                <div>
+                    <a href="seemore2.html"><img src="fridge.png"></a>
+                    <p>Refrigerators</p>
+                </div>
+
+                <div>
+                    <img src="microwave.png">
+                    <p>Microwaves</p>
+                </div>
+
+                <div>
+                    <img src="washing.png">
+                    <p>Washing machines</p>
+                </div>
+                <a href="see more.html" class="seemore"> Explore all </a>
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card-box">
+            <h3>Revamp your home</h3>
+
+            <div class="card-grid">
+                <div>
+                    <img src="decor 2.png">
+                    <p>wardrobe</p>
+                </div>
+
+                <div>
+                    <img src="decor 3.png">
+                    <p>Decor</p>
+                </div>
+                <div>
+                    <img src="decor.png">
+                    <p>Table weights</p>
+                </div>
+                <div>
+                    <img src="carpet.png">
+                    <p>Carpets</p>
+                </div>
+                <a href="see more.html" class="seemore"> Explore all </a>
+            </div>
+        </div>
+
+
+        <!-- CARD 3 -->
+        <div class="card-box" ">
+            <h3>Bulk order discounts + Up to 18% GST savings</h3>
+
+            <div class=" card-grid">
+            <div>
+                <img src="laptop.png">
+                <p>Laptops</p>
+            </div>
+            <div>
+                <img src="fryer.png">
+                <p>Air fryers</p>
+            </div>
+
+            <div>
+                <img src="boxx.png">
+                <p>Register using GST</p>
+            </div>
+            <div>
+                <img src="chair.png">
+                <p>Min. 50% off | office <br>furniture</p>
+
+            </div>
+            <a href="see more.html" class="seemore"> see more</a>
+        </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="card-box" ">
+            <h3>Home essentials</h3>
+
+            <div class=" card-grid">
+        <div>
+            <img src="suppliess.png">
+            <p>Cleaning</p>
+        </div>
+
+        <div>
+            <img src="bathroom.png">
+            <p>Bathroom Accessories</p>
+        </div>
+        <div>
+            <img src="tools.png">
+            <p>Home tools</p>
+        </div>
+        <div>
+            <img src="wallpaper.png">
+            <p>Wallpapers </p>
+        </div>
+        <a href="see more.html" class="seemore"> Explore all </a>
+    </div>
+    </div>
+
+    </div>
+    </div>
+
+
+
+    <!-- 2 card///// -->
+
+    <div class="cards-container">
+
+        <!-- CARD 1 -->
+        <div class="card-box">
+            <h3>Appliances for your home</h3>
+
+            <div class="card-grid">
+                <div>
+                    <img src="ac.png">
+                    <p>Air conditioners</p>
+                </div>
+
+                <div>
+                    <img src="fridge.png">
+                    <p>Refrigerators</p>
+                </div>
+
+                <div>
+                    <img src="microwave.png">
+                    <p>Microwaves</p>
+                </div>
+
+                <div>
+                    <img src="washing.png">
+                    <p>Washing machines</p>
+                </div>
+                <a href="see more.html" class="seemore"> See more</a>
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card-box">
+            <h3>Revamp your home</h3>
+
+            <div class="card-grid">
+                <div>
+                    <img src="decor 2.png">
+                    <p>wardrobe</p>
+                </div>
+
+                <div>
+                    <img src="decor 3.png">
+                    <p>Decor</p>
+                </div>
+                <div>
+                    <img src="decor.png">
+                    <p>Table weights</p>
+                </div>
+                <div>
+                    <img src="carpet.png">
+                    <p>Carpets</p>
+                </div>
+                <a href="see more.html" class="seemore"> Explore all</a>
+            </div>
+        </div>
+
+
+        <!-- CARD 3 -->
+        <div class="card-box" ">
+            <h3>Bulk order discounts + Up to 18% GST savings</h3>
+
+            <div class=" card-grid">
+            <div>
+                <img src="laptop.png">
+                <p>Laptops</p>
+            </div>
+            <div>
+                <img src="fryer.png">
+                <p>Air fryers</p>
+            </div>
+
+            <div>
+                <img src="boxx.png">
+                <p>Register using GST</p>
+            </div>
+            <div>
+                <img src="chair.png">
+                <p>Min. 50% off | office <br>furniture</p>
+
+            </div>
+            <a href="see more.html" class="seemore"> Explore all </a>
+        </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="card-box" ">
+            <h3>Home essentials</h3>
+
+            <div class=" card-grid">
+        <div>
+            <img src="suppliess.png">
+            <p>Cleaning</p>
+        </div>
+
+        <div>
+            <img src="bathroom.png">
+            <p>Bathroom Accessories</p>
+        </div>
+        <div>
+            <img src="tools.png">
+            <p>Home tools</p>
+        </div>
+        <div>
+            <img src="wallpaper.png">
+            <p>Wallpapers </p>
+        </div>
+        <a href="see more.html" class="seemore"> See more</a>
+    </div>
+    </div>
+
+    </div>
+    </div>
+
+    <!-- ///crausel2 -->
+
+    <div id="carouselExample2" class="carousel slide">
+        <div class="carousel-inner" style="padding-left: 20px; padding-right: 20PX; background-color: #e3e6e6;">
+
+            <div class="carousel-item active">
+                <a href=""><img src="slider1.png" class="d-block w-100"></a>
+            </div>
+
+            <div class="carousel-item">
+                <a href=""> <img src="slider2.png" class="d-block w-100"></a>
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+
+    <a href="#" class="back-to-top"> Back to Top</a>
+
+    <section id="home">
+        <h2> </h2>
+    </section>
+
+
+
+
+    <!-- footer//// -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-section">
+                <h3>Get to Know Us</h3>
+                <p>About Us</p>
+                <p>Careers</p>
+                <p>Press Releases</p>
+                <p>Amazon Science</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Connect with Us</h3>
+                <p>Facebook</p>
+                <p>Twitter</p>
+                <p>Instagram</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Make Money with Us</h3>
+                <p>Sell on Website</p>
+                <p>Affiliate Program</p>
+                <p>Advertise Your Products</p>
+                <p>Protect and Build Your Brand
+                <p> Amazon Global Selling</p>
+                <p> Supply to Amazon</p>
+                <p>Become an Affiliate</p>
+                <p>Fulfilment by Amazon</p>
+                <p>Advertise Your Products</p>
+                <p>Amazon Pay on Merchants</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Let Us Help You</h3>
+                <p>Your Account</p>
+                <p>Returns Centre</p>
+                <p>Help</p>
+                <p>Recalls and Product Safety Alerts</p>
+                <p>100% Purchase Protection</p>
+                <p>Amazon App Download</p>
+            </div>
+
+            <hr >
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 YourWebsite.com
+        </div>
+        <div>
+            <a href=""><img src="logo2amazon.png" alt="" class="logo2"></a>
+            <span class="dropdown ms-3">
+                    <button class="btn text-white dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        🌐English
+                    </button>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">English (EN)</a></li>
+                        <li><a class="dropdown-item" href="#">हिंदी (HI)</a></li>
+                        <li><a class="dropdown-item" href="#">தமிழ் (TA)</a></li>
+                        <li><a class="dropdown-item" href="#">తెలుగు (TE)</a></li>
+                    </ul>
+            </span>
+
+        </div>
+
+    </footer>
+</body>
+
+</html>
